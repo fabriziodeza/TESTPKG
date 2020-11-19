@@ -1,0 +1,35 @@
+---
+title: "my-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(TESTPKG)
+```
+
+# Function One - mybin()
+
+This function takes the number of iterations (iter), the sample size (n), probability (p), and a boolean (ret). The boolean, ret, is used to signify whether you would prefer you would like extra information output. It uses the parameters to simulates binomial sample and then return a histogram of the sample 
+
+# Function Two - myclt()
+
+This function takes in the number of columns and number of samples. Using these parameters it creates a matrix of random samples. The columns of this matrix is summed and then displayed in a histogram to demonstrate the central limit theorem.
+
+# Function Three - mycyi()
+
+This function takes in a sample distribution and return a 95 percent confidence interval.
+
+# Function Four - myncurve()
+
+This package uses the parameters to generate a normal curve, and then uses the parameter xt to shade the region below the curve from 0 to xt.
